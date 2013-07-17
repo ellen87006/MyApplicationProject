@@ -86,29 +86,30 @@ public class MainActivity extends Activity {
                 float x_data = values[0];
                 float y_data =values[1];
                 float z_data =values[2];
-                if (z_data<0) {
-                    if(tmp>0.5&&z_data<-0.5)
-                    {
-                        image.setImageResource(R.drawable.back);
-                        tmp=0;
-                    }
-                    else if(z_data<-0.5)
-                    {
+             //   if (z_data<0||x_data<0) {
+                   // if(tmp>0.5&&z_data<-0.5)
+                  //  {
+                //        image.setImageResource(R.drawable.back);
+                  //      tmp=0;
+                  //  }
+                  //  else if(z_data<-0.5)
+                  //  {
                         tmp=z_data;
-                    }
-                }
-                else if (z_data>0) {
-                    if(tmp<-0.5&&z_data>0.5)
-                    {
+                  //  }
+            //    }
+               if (z_data>2||x_data>2) {
+                    //if(tmp<-0.5&&z_data>0.5)
+                  //  {
                         image.setImageResource(R.drawable.go);
                         tmp=0;
-                    }
-                    else if(z_data>0.5)
-                    {
+                   // }
+                   // else if(z_data>0.5)
+                   // {
                         tmp=z_data;
-                    }
+                   // }
                 } else {
                     TextView01.setText("TYPE_ACCELEROMETER: \n\r"+String.valueOf(x_data)+"\n\r"+String.valueOf(y_data)+"\n\r"+String.valueOf(z_data)+"\n\r" );
+                   image.setImageResource(R.drawable.icon);
 
                 }
 
